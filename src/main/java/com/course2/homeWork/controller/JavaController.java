@@ -22,13 +22,14 @@ public class JavaController {
     public Question add(@RequestParam String question, @RequestParam String answer) {
         return questionService.add(question, answer);
     }
+
     @GetMapping("/remove")
     public Question remove(@RequestParam String question, @RequestParam String answer) {
         return questionService.remove(new Question(question, answer));
     }
 
     @GetMapping
-    public Collection<Question> getAll(){
+    public Collection<Question> getAll() {
         return questionService.getAll();
 
     }
